@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+body {
+  text-align: center;
+  background: linear-gradient(
+    141deg,
+    rgb(70, 121, 129) 25%,
+    rgb(135, 192, 201) 40%,
+    rgb(225, 246, 250) 55%
+  );
+  color: #555;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 64px;
+  padding-top: 5vh;
+  height: 100vh;
+  overflow: hidden;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+}
+
+div {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: -45px;
+}
+
+div:first-of-type {
+  /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+}
+
+div:last-of-type {
+  width: 0px;
+  animation: reveal 7s infinite;
+}
+
+div:last-of-type span {
+  margin-left: -355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 955px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 955px;
+  }
+}
+
+p {
+  font-size: 12px;
+  color: #999;
+  margin-top: 200px;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 45px;
+  }
+  div {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: -180px;
+  }
+}

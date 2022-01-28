@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/99ab3e2927.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <body>
+        <body>
+  <div class="container-fluid mainheading">
+    <div>
+      <span
+        style="
+          position: relative;
+          top: -60px;
+          background-color: rgba(0, 0, 0, 0.5);
+          height: 64px;
+          width: 600px;
+        "
+      >
+        Tillotoma Foundation</span
+      >
+    </div>
+  </div>
+  <nav class="navbar navbar-light p-3 cl-b">
+    <div
+      class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between"
+    >
+      <a class="navbar-brand" href="#">
+        <h4>ADMIN DASHBOARD</h4>
+        <!-- class="text-cl" -->
+      </a>
+      <button
+        class="navbar-toggler d-md-none collapsed mb-3"
+        type="button"
+        data-toggle="collapse"
+        data-target="#sidebar"
+        aria-controls="sidebar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-2">
+      <input
+        class="form-control form-control-dark"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+      />
+    </div>
+
+    <div
+      class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0"
+    >
+      <div class="mr-3 mt-1">
+        <a
+          class="social-button"
+          href="https://www.facebook.com/tillotomafoundation/"
+          ><i class="fab fa-facebook fa-2x sobutton" style="color: #1877f2"></i
+        ></a>
+        <a
+          class="social-button"
+          href="https://www.instagram.com/tillotomafoundation/"
+          ><i
+            class="fab fa-instagram-square fa-2x sobutton"
+            style="color: #7232bd"
+          ></i
+        ></a>
+        <a
+          class="social-button"
+          href="https://www.youtube.com/tillotomafoundation"
+          ><i class="fab fa-youtube fa-2x sobutton" style="color: #ff0000"></i
+        ></a>
+        <a class="social-button" href="https://twitter.com/TillotomaF"
+          ><i class="fa fa-twitter fa-2x sobutton" style="color: #1da1f2"></i
+        ></a>
+      </div>
+
+      <div class="dropdown" style="margin-left: 50px">
+        <button
+          class="btn dropdown-toggle text-cl"
+          style="background-color: rgba(0, 0, 0, 0.3)"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Hello, Welcome
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <!-- <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Chats</a>
+          </li>
+          <li> -->
+            <a
+              class="dropdown-item" href="index.html"
+              >Log Out</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav
+        id="sidebar"
+        class="col-md-3 col-lg-2 d-md-block sidebar collapse cl-bl"
+      >
+        <div class="position-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="https://tillotomafoundation.org/">
+                <img
+                  style="
+                    border-radius: 5%;
+                    width: 193px;
+                    height: 200px;
+                    margin-left: 15px;
+                  "
+                  src="https://img1.wsimg.com/isteam/ip/873cfd32-b5b6-45df-831a-8ffd97f31c81/e5adef8e-fedc-485f-b331-7b6ef1ac23d3.jpg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <br />
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page" href="admin.html"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-home"
+                >
+                  <path
+                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                  ></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span class="ml-2 text-cl">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="studentInfo.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-file"
+                >
+                  <path
+                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
+                  ></path>
+                  <polyline points="13 2 13 9 20 9"></polyline>
+                </svg>
+                <span class="ml-2 text-cl">Students</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="facultyInfo.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-shopping-cart"
+                >
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  ></path>
+                </svg>
+                <span class="ml-2 text-cl">Faculty</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-bar-chart-2"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                <span class="ml-2 text-cl">Calender</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-layers"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span class="ml-2 text-cl">Talk To Us</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-sm btn-secondary ml-3 mt-2" href="#">
+                <svg
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-book"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"
+                  />
+                </svg>
+                <span class="ml-2">Read tutorial</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-sm btn-warning ml-3 mt-2" href="#">
+                ⚡︎ GO LIVE
+              </a>
+            </li>
+            <!--<li class="nav-item">
+                <a
+                  class="btn btn-sm ml-3 mt-2 cl-lo"
+                  href="https://tillotomafoundation.org/"
+                >
+                  By Tillotoma Foundation ❤️
+                </a>
+              </li> -->
+          </ul>
+        </div>
+      </nav>
+      <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb cl-lb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a>
+              <!-- class="text-cl" -->
+            </li>
+            <li class="breadcrumb-item" aria-current="page">Overview</li>
+          </ol>
+        </nav>
+        <h1 class="h2">Dashboard</h1>
+        <p>This is the homepage of an admin dashboard</p>
+        <div class="row my-4">
+          <div class="col-12 col-md-8 col-lg-5 mb-9 mb-lg-0">
+            <div class="card">
+              <h5 class="card-header cl-lb">ADD TASKS</h5>
+              <div class="card-body">
+                <!-- <app-task-item
+                  *ngFor="let task of tasks"
+                  [task]="task"
+                ></app-task-item> -->
+                <!-- <h5 class="card-title">Task</h5>
+                <p class="card-text">Date</p>
+                <p class="card-text text-success">Reminder</p> -->
+
+                <label for="">Task Name : &nbsp;</label
+                ><input type="text" [(ngModel)]="textname" />
+                <hr />
+                <label for="">Due date : &nbsp;</label
+                ><input type="text" [(ngModel)]="duedate" />
+                <hr />
+                <label for="">Reminder : &nbsp;</label
+                ><input type="checkbox" [(ngModel)]="reminder" />
+                <hr />
+                <button
+                  class="btn btn-primary"
+                  (click)="addTask(textname, duedate, reminder)"
+                >
+                  Add Task
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3"></div>
+          <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3"></div>
+          <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-xl-8 mb-4 mb-lg-0">
+            <div class="card">
+              <h5 class="card-header cl-lb">Latest tasks added</h5>
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Task</th>
+                      <th scope="col">Date&Day</th>
+                      <th scope="col">Reminder</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let task of tasks">
+                      <td>{{ task.id }}</td>
+                      <td>{{ task.text }}</td>
+                      <td>{{ task.day }}</td>
+                      <td
+                        [ngStyle]="{
+                          color: task.reminder === true ? 'green' : 'red'
+                        }"
+                      >
+                        {{ task.reminder }}
+                      </td>
+                      <td>
+                        <i
+                          class="fas fa-trash fa-1x sobutton"
+                          style="color: grey"
+                        ></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-4"></div>
+        </div>
+        <footer class="pt-5 d-flex justify-content-between">
+          <span class="text-secondary">Copyright © 2022 </span>
+          <ul class="nav m-0">
+            <li class="nav-item">
+              <a class="nav-link text-secondary" aria-current="page" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"
+                >Terms and conditions</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Contact</a>
+            </li>
+          </ul>
+        </footer>
+      </main>
+    </div>
+  </div>
+<script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    </script> 
+  </body>
+</html>
