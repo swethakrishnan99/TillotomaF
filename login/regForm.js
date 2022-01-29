@@ -35,9 +35,9 @@ function regForm(userType) {
     if (userType === "student")
         url = "https://tillotomaf.netlify.app/student.html"
     else if (userType === "faculty")
-        url = "https://tillotomaf.netlify.app/public/faculty.html"
+        url = "https://tillotomaf.netlify.app/faculty.html"
     else if (userType === "admin")
-        url = "https://tillotomaf.netlify.app/public/admin.html"
+        url = "https://tillotomaf.netlify.app/admin.html"
 
     if (userType === "student") {
         const occupation = document.getElementById("reg-occupation").value;

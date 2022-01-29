@@ -14,9 +14,9 @@ function loginForm(userType) {
     if (userType === "student")
         url = "https://tillotomaf.netlify.app/student.html"
     else if (userType === "faculty")
-        url = "https://tillotomaf.netlify.app/public/faculty.html"
+        url = "https://tillotomaf.netlify.app/faculty.html"
     else
-        url = "https://tillotomaf.netlify.app/public/admin.html"
+        url = "https://tillotomaf.netlify.app/admin.html"
 
     const data = { email, password, userType };
 
