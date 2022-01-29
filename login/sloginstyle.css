@@ -348,13 +348,16 @@ a {
     left: 25vw;
     top: 15%;
   }
+  nav {
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 570px) {
   .container {
     max-width: 85vw;
     left: 0vw;
-    margin: auto;
+    margin: 0 auto;
     height: 70vh;
   }
   form .user-details .input-box {
@@ -393,5 +396,8 @@ a {
     position: fixed;
     left: 0vw;
     margin: 2vw;
+  }
+  nav {
+    padding: 0;
   }
 }
