@@ -12,11 +12,11 @@ function loginForm(userType) {
     const email = document.getElementById("log-email").value;
 
     if (userType === "student")
-        url = "http://127.0.0.1:5500/public/student.html"
+        url = "https://tillotomaf.netlify.app/public/student.html"
     else if (userType === "faculty")
-        url = "http://127.0.0.1:5500/public/faculty.html"
+        url = "https://tillotomaf.netlify.app/public/faculty.html"
     else
-        url = "http://127.0.0.1:5500/public/admin.html"
+        url = "https://tillotomaf.netlify.app/public/admin.html"
 
     const data = { email, password, userType };
 
