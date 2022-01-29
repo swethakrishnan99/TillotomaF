@@ -12,7 +12,7 @@ function loginForm(userType) {
     const email = document.getElementById("log-email").value;
 
     if (userType === "student")
-        url = "https://tillotomaf.netlify.app/public/student.html"
+        url = "https://tillotomaf.netlify.app/student.html"
     else if (userType === "faculty")
         url = "https://tillotomaf.netlify.app/public/faculty.html"
     else

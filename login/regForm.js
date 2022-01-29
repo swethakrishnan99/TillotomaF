@@ -33,7 +33,7 @@ function regForm(userType) {
     const nationality = document.getElementById("reg-nationality").value;
 
     if (userType === "student")
-        url = "https://tillotomaf.netlify.app/public/student.html"
+        url = "https://tillotomaf.netlify.app/student.html"
     else if (userType === "faculty")
         url = "https://tillotomaf.netlify.app/public/faculty.html"
     else if (userType === "admin")
