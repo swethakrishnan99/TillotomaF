@@ -12,8 +12,17 @@ const handleNewAdmin = async (req, res) => {
         dob,
         country,
     } = req.body;
-    if (!name || !password || !email || !phone)
-        return res.status(400).json({ message: "fields are required." });
+    if (!name || !password || !email || !phone || !dob || !nationality || !country)
+        return res.status(400).json({ message: "please fill all the mandatory fields" });
+
+    // password validation
+    const isPasswordSecure = (password) => {
+        const re = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
+        return re.test(password);
+    };
+    if (!isPasswordSecure(password))
+        return res.status(400).json({ message: "enter valid password" });
+
 
     // check for duplicate emails in the db
     const duplicate = await admin.findOne({ email });

@@ -10,12 +10,22 @@ const handleNewStudent = async (req, res) => {
         dob,
         whatsapp,
         nationality,
+        country,
         education,
         presentOccupation,
         language,
     } = req.body;
-    if (!name || !password || !email || !phone)
-        return res.status(400).json({ message: "fields are required." });
+    if (!name || !password || !email || !phone || !dob || !nationality || !education || !presentOccupation || !country)
+        return res.status(400).json({ message: "please fill all the mandatory fields" });
+
+    // password validation
+    const isPasswordSecure = (password) => {
+        const re = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
+        return re.test(password);
+    };
+    if (!isPasswordSecure(password))
+        return res.status(400).json({ message: "enter valid password" });
+
 
     // check for duplicate emails in the db
     const duplicate = await student.findOne({ email });
@@ -36,6 +46,7 @@ const handleNewStudent = async (req, res) => {
             nationality,
             education,
             presentOccupation,
+            countryOfResidence: country,
             language,
         });
 

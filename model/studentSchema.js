@@ -17,24 +17,24 @@ const studentSchema = schema({
         lowercase: true,
         unique: true,
         required: 'Email address is required',
-        //     validate: [validateEmail, 'Please fill a valid email address'],
-        //     match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
+        validate: [validateEmail, 'Please fill a valid email address'],
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
     },
     phone: {
-        type: Number,
+        type: String,
         required: "Phone Number is required"
     },
     password: {
         type: String,
         required: true,
-        match: [/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/, 'please fill valid password']
+
     },
     dob: {
         type: String,
         required: true
     },
     whatsapp: {
-        type: Number
+        type: String
     },
     nationality: {
         type: String,
@@ -49,6 +49,9 @@ const studentSchema = schema({
     },
     languages: {
         type: Array,
+    },
+    countryOfResidence: {
+        type: String,
         required: true
     }
 })

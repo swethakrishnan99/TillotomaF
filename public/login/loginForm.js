@@ -32,10 +32,10 @@ function loginForm(userType) {
             const errorData = error.response;
             if (errorData.status === 409)
                 document.querySelector(".err-message-login").innerHTML =
-                    "please enter valid password";
+                    "Incorrect password. Please try again";
             else if (errorData.status === 400)
                 document.querySelector(".err-message-login").innerHTML =
-                    "user doesn't exist";
+                    "User doesn't exist";
             else document.querySelector(".err-message-login").innerHTML = "";
         });
 }

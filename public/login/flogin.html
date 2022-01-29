@@ -4,6 +4,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="sloginstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 
 <body>
@@ -47,48 +49,48 @@
         <div class="user-details">
 
           <div class="input-box">
-            <span class="details">Full Name:</span>
+            <span class="details">Full Name:<span class="imp">*</span></span>
             <input type="text" placeholder="Enter your username:" name="name" id="reg-name" required />
           </div>
-
+          
           <div class="input-box">
-            <span class="details">Email:</span>
-            <input type="email" 
-            placeholder="Enter your email address:" 
-            name="email" 
-            id="reg-email" 
-            required />
+            <span class="details">Email:<span class="imp">*</span></span>
+            <input type="email" placeholder="Enter your email address:" name="email" id="reg-email" required />
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Password:<span class="imp">*</span></span>
+            <input type="password" placeholder="password" name="passwd" id="reg-password"
+            title="Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:" required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" />
+            <p id="snth">strength:</p>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Date of birth:<span class="imp">*</span></span>
+            <input type="date" placeholder="date" name="dob" id="reg-dob" required />
           </div>
 
           <div class="input-box">
-            <span class="details">Phone Number:</span>
+            <span class="details">Phone Number:<span class="imp">*</span></span>
             <input type="text" placeholder="1234567890" name="phone" id="reg-phone" required />
           </div>
+
           <div class="input-box">
               <span class="details">whatsapp Number:</span>
               <input type="text" placeholder="8778599348" name="whatsapp" id="reg-whatsapp" />
           </div>
           
           <div class="input-box">
-            <span class="details">Date of birth:</span>
-            <input type="date" placeholder="date" name="dob" id="reg-dob" required />
+            <span class="details">country:<span class="imp">*</span></span>
+            <input type="text" placeholder="usa" name="country" id="reg-country" required />
           </div>
 
           <div class="input-box">
-            <span class="details">country:</span>
-            <input type="text" placeholder="usa" name="country" id="reg-country" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Nationality:</span>
+            <span class="details">Nationality:<span class="imp">*</span></span>
             <input type="text" placeholder="indian" name="nationality" id="reg-nationality" required />
           </div>
 
-          <div class="input-box">
-            <span class="details">Password:</span>
-            <input type="password" placeholder="password" name="passwd" id="reg-password"
-              title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" required
-              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
-          </div>
         </div>
         <p class="err-message-reg"></p>
         <div class="button">

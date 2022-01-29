@@ -2,13 +2,9 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema
 
 var validateEmail = function (email) {
-    var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return re.test(email)
 };
-var validatePassword = function (password) {
-    var re = /^ (?=.*\d)(?=.* [a - z])(?=.* [A - Z])(?=.* [a - zA - Z]).{ 8,} $/;
-    return re.test(password)
-}
 
 const facultySchema = new schema({
     name: {
@@ -23,24 +19,24 @@ const facultySchema = new schema({
         unique: true,
         required: 'Email address is required',
         validate: [validateEmail, 'Please fill a valid email address'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
+
     },
     phone: {
-        type: Number,
+        type: String,
         required: "Phone Number is required"
     },
     password: {
         type: String,
         required: true,
-        // validate: [validatePassword, "please enter valid password"],
-        // match: [/^(?=.*\d)(?=.* [a - z])(?=.* [A - Z])(?=.* [a - zA - Z]).{ 8,} $/, 'please fill valid password']
+
     },
     dob: {
         type: String,
         required: true
     },
     whatsapp: {
-        type: Number
+        type: String
     },
     nationality: {
         type: String,

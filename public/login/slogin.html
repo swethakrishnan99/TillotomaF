@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="sloginstyle.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   </head>
   <body>
     <nav>
@@ -18,7 +21,7 @@
         </div>
         <div class="field">
           <input type="password" name="password" id="log-password" required />
-          <label>Password</label>
+          <label>Password </label>
         </div>
         <p class="err-message-login"></p>
         <div class="content">
@@ -41,90 +44,63 @@
       <div class="content">
         <form id="reg-form">
           <div class="user-details">
+
             <div class="input-box">
-              <span class="details" >Full Name:</span>
+              <span class="details" >Full Name:<span class="imp">*</span></span>
               <input type="text" placeholder="xyz abc" name="name" id="reg-name" required />
             </div>
 
             <div class="input-box">
-              <span class="details">Date of birth:</span>
-              <input
-                type="date"
-                placeholder="date"
-                name="date"
-                id="reg-dob"
-                required
-              />
+              <span class="details">Email:<span class="imp">*</span></span>
+              <input type="email" placeholder="Enter your email address:" name="email" id="reg-email" required />
             </div>
 
             <div class="input-box">
-              <span class="details">Educational Qualification:</span>
-              <input type="text" placeholder="education" name="education" id="reg-education" required />
-            </div>
-            <div class="input-box">
-              <span class="details">Present Occupation:</span>
-              <input type="text" placeholder="Occupation" name="Occupation" id="reg-occupation" required />
-            </div>
-           
-            <div class="input-box">
-              <span class="details">Country:</span>
-              <input
-                type="text"
-                placeholder="Country"
-                name="Country"
-                id="reg-country"
-                required
-              />
+              <span class="details">Password:<span class="imp">*</span></span>
+              <input type="password" placeholder="kfjssa2@13" name="password" id="reg-password"
+                title="Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:" required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" />
+                <p id="snth">strength:</p>
             </div>
 
             <div class="input-box">
-              <span class="details">Nationality:</span>
-              <input
-                type="text"
-                placeholder="nationality"
-                name="nationality"
-                id="reg-nationality"
-                required
-              />
+              <span class="details">Date of birth:<span class="imp">*</span></span>
+              <input type="date" placeholder="date" name="date" id="reg-dob" required />
             </div>
-
+            
             <div class="input-box">
-              <span class="details">Email:</span>
-              <input
-                type="email"
-                placeholder="Enter your email address:"
-                name="email"
-                id="reg-email"
-                required
-              />
+              <span class="details">Phone Number:<span class="imp">*</span></span>
+              <input type="tel" placeholder="1234567890" name="phone" id="reg-phone" required />
             </div>
-            <div class="input-box">
-              <span class="details">Phone Number:</span>
-              <input
-                type="tel"
-                placeholder="1234567890"
-                name="phone"
-                id="reg-phone"
-                required
-              />
-            </div>
+            
             <div class="input-box">
               <span class="details">whatsapp Number:</span>
-              <input type="tel" placeholder="1234567890" name="whatsapp" id="reg-whatsapp"/>
+              <input type="tel" placeholder="1234567890" name="whatsapp" id="reg-whatsapp" />
             </div>
-           
+
             <div class="input-box">
-              <span class="details">Password:</span>
-              <input
-                type="password"
-                placeholder="kfjssa2@13"
-                name="password"
-                id="reg-password"
-                title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number"
-                required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+              <span class="details">Educational Qualification:<span class="imp">*</span></span>
+              <input type="text" placeholder="education" name="education" id="reg-education" required />
             </div>
-            <p class="err-message-reg"></p>
+
+            <div class="input-box">
+              <span class="details">Present Occupation:<span class="imp">*</span></span>
+              <input type="text" placeholder="Occupation" name="Occupation" id="reg-occupation" required />
+            </div>
+
+            <div class="input-box">
+                <span class="details">Country:<span class="imp">*</span></span>
+                <input type="text" placeholder="Country" name="Country" id="reg-country" required />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Nationality:<span class="imp">*</span></span>
+              <input type="text" placeholder="nationality" name="nationality" id="reg-nationality" required />
+            </div>
+
           </div>
+
+            <p class="err-message-reg"></p>
           <div class="button">
             <input type="submit"  name="submit"  onclick="regForm('student')"/>
             <p id="policy">By signing up, you agree to our<a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></p>

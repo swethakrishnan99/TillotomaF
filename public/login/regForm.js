@@ -3,17 +3,34 @@ const register = document.getElementById("reg-form");
 // prevent default form behavior
 register.addEventListener("submit", (event) => {
     event.preventDefault();
+    const phoneNumber = phoneInput.getNumber();
+
 });
 
+// add country code in contact number
+const phoneInputField = document.querySelector("#reg-phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+
+
+// add country code in whatsapp number
+const whatsappInputField = document.querySelector("#reg-whatsapp");
+const whatsappInput = window.intlTelInput(whatsappInputField, {
+    utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+// submit registration form
 function regForm(userType) {
     const name = document.getElementById("reg-name").value;
     const password = document.getElementById("reg-password").value;
     const email = document.getElementById("reg-email").value;
-    const phone = document.getElementById("reg-phone").value;
+    const phone = phoneInput.getNumber();
+    const whatsapp = whatsappInput.getNumber();
     const dob = document.getElementById("reg-dob").value;
     const country = document.getElementById("reg-country").value;
     const nationality = document.getElementById("reg-nationality").value;
-    const whatsapp = document.getElementById("reg-whatsapp").value;
 
     if (userType === "student")
         url = "http://127.0.0.1:5500/public/student.html"
@@ -63,17 +80,17 @@ function regForm(userType) {
             window.location.href = url;
         })
         .catch((error) => {
-            console.log(error);
+            console.log(error.message, "error message");
+            console.log(error.response, "error data");
             const errorData = error.response;
             if (errorData.status === 409)
                 document.querySelector(".err-message-reg").innerHTML =
                     "user already exist";
             else if (errorData.status === 400)
-                document.querySelector(".err-message-reg").innerHTML =
-                    "please fill the mandatory field";
+                document.querySelector(".err-message-reg").innerHTML = errorData.data.message;
             else if (errorData.status === 500)
                 document.querySelector(".err-message-reg").innerHTML =
-                    "please enter valid values";
+                    "enter valid email address";
             else document.querySelector(".err-message-reg").innerHTML = "";
         });
 }

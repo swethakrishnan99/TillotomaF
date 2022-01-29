@@ -25,6 +25,17 @@ nav {
   padding: 10px 0;
   z-index: 15;
 }
+.err-message-login,
+.err-message-reg,
+#snth {
+  font-size: 15px;
+  margin-left: 10px;
+  color: red;
+}
+.imp {
+  font-weight: lighter;
+  color: red;
+}
 
 .logo a {
   position: relative;
