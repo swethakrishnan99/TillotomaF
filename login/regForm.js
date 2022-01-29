@@ -72,7 +72,7 @@ function regForm(userType) {
     }
 
     axios
-        .post("https://tillotomab.herokuapp.com/api/v1/register", data)
+        .post("https://tillotomaback.herokuapp.com/api/v1/register", data)
         .then((res) => {
             console.log("RESPONSE RECEIVED: ", res);
             document.querySelector(".err-message-reg").innerHTML = "";

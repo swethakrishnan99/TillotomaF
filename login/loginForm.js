@@ -21,7 +21,7 @@ function loginForm(userType) {
     const data = { email, password, userType };
 
     axios
-        .post("https://tillotomab.herokuapp.com/api/v1/login", data)
+        .post("https://tillotomaback.herokuapp.com/api/v1/login", data)
         .then((res) => {
             console.log("RESPONSE RECEIVED: ", res);
             document.querySelector(".err-message-login").innerHTML = "";
