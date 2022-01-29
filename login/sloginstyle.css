@@ -22,7 +22,7 @@ body {
 nav {
   position: relative;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 1vw;
   z-index: 15;
 }
 .err-message-login,
@@ -185,7 +185,7 @@ form .signup-link a:hover {
 
 .container {
   position: relative;
-  left: 35%;
+  left: 30vw;
   top: 10%;
   max-width: 600px;
   width: 100%;
@@ -309,27 +309,89 @@ a {
   margin-top: 20px;
   text-align: center;
 }
-@media (max-width: 584px) {
+@media only screen and (max-width: 1300px) and (min-width: 800px) {
   .container {
-    max-width: 100%;
+    left: 20vw;
+  }
+  html,
+  body {
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 800px) and (min-width: 570px) {
+  .container {
+    max-width: 80vw;
+    left: 0vw;
+    margin: 0px 10vw 20vh 10vw;
   }
   form .user-details .input-box {
     margin-bottom: 15px;
-    width: 100%;
+    width: 60vw;
+    margin: auto;
+  }
+  .iti input,
+  .iti input[type="text"],
+  .iti input[type="tel"] {
+    width: 60vw;
   }
   form .category {
     width: 100%;
   }
   .content form .user-details {
-    max-height: 300px;
+    height: 50vh;
     overflow-y: scroll;
   }
   .user-details::-webkit-scrollbar {
     width: 5px;
   }
+  .wrapper {
+    left: 25vw;
+    top: 15%;
+  }
 }
-@media (max-width: 459px) {
-  .container .content .category {
-    flex-direction: column;
+
+@media only screen and (max-width: 570px) {
+  .container {
+    max-width: 85vw;
+    left: 0vw;
+    margin: auto;
+    height: 70vh;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 70vw;
+    margin: auto;
+  }
+  .iti input,
+  .iti input[type="text"],
+  .iti input[type="tel"] {
+    width: 67vw;
+  }
+  form .category {
+    width: 100%;
+  }
+  .content form .user-details {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+  .container.title {
+    font-size: 25px;
+  }
+  .logo a {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .button > hr {
+    display: none;
+  }
+  .wrapper {
+    position: fixed;
+    left: 0vw;
+    margin: 5vw;
   }
 }
