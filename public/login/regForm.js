@@ -69,7 +69,6 @@ function regForm(userType) {
             whatsapp,
             userType,
         }
-        console.log(data)
     }
 
     axios

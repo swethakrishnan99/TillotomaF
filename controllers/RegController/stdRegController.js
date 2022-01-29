@@ -12,10 +12,10 @@ const handleNewStudent = async (req, res) => {
         nationality,
         country,
         education,
-        presentOccupation,
+        occupation,
         language,
     } = req.body;
-    if (!name || !password || !email || !phone || !dob || !nationality || !education || !presentOccupation || !country)
+    if (!name || !password || !email || !phone || !dob || !nationality || !education || !occupation || !country)
         return res.status(400).json({ message: "please fill all the mandatory fields" });
 
     // password validation
@@ -45,7 +45,7 @@ const handleNewStudent = async (req, res) => {
             whatsapp,
             nationality,
             education,
-            presentOccupation,
+            presentOccupation: occupation,
             countryOfResidence: country,
             language,
         });
