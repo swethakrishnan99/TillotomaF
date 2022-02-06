@@ -22,7 +22,7 @@ const handleSubmit = () => {
 
     else {
         axios
-            .put("http://localhost:8000/api/v1/reset-password", {
+            .put("https://tillotomaback.herokuapp.com/api/v1/reset-password", {
                 resetLink,
                 password,
                 user

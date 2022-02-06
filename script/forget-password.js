@@ -10,7 +10,7 @@ const handleSubmit = () => {
     const email = document.getElementById("email").value;
     const err = document.getElementById("err-message");
     axios
-        .put("http://localhost:8000/api/v1/forget-password", { email, user })
+        .put("https://tillotomaback.herokuapp.com/api/v1/forget-password", { email, user })
         .then((response) => {
             err.innerText = response.data.message;
         })
