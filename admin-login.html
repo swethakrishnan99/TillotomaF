@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="stylesheet" href="sloginstyle.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   </head>
@@ -31,7 +31,7 @@
             <input type="checkbox" id="remember-me">
             <label for="remember-me">Remember me</label>
           </div>
-          <div class="pass-link"><a href="#">Forgot password?</a></div>
+          <div class="pass-link"><a href="./forgot-password.html?user=admin">Forgot password?</a></div>
         </div>
         <div class="field">
           <input type="submit" name="submit" value="login" onclick="loginForm('admin')">
@@ -104,8 +104,8 @@
       </div>
     </div>
 
-  <script src="../login/slogin.js"></script>
-  <script src="./loginForm.js"></script>
-  <script src="./regForm.js"></script>
+  <script src="./script/login.js"></script>
+  <script src="./script/loginForm.js"></script>
+  <script src="./script/regForm.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body></html>
